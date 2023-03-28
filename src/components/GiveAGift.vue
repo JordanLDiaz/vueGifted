@@ -5,11 +5,11 @@
       <h5 class="text-center">Join the joy of gift giving!</h5>
       <form action="" class="input-group" @submit.prevent="createGift">
         <p class="p-2">TAG :</p>
-        <input class="form-control form-control-md" type="text" placeholder="Input gift message" id="tag" name="tag"
-          required v-model="giftForm.tag">
+        <input class="form-control form-control-md" type="text" placeholder="Gift message" id="tag" name="tag" required
+          v-model="giftForm.tag">
         <p class="p-2">URL :</p>
-        <input class="form-control form-control-md" type="text" placeholder="input image url" id="url" name="url"
-          required v-model="giftForm.url">
+        <input class="form-control form-control-md" type="text" placeholder="Gift image URL" id="url" name="url" required
+          v-model="giftForm.url">
         <button class="bg-info lighten text-white m-2 px-3 fs-5 rounded"> Submit </button>
       </form>
     </div>
@@ -36,6 +36,7 @@ export default {
     })
 
     return {
+      giftForm,
       gifts: computed(() => AppState.gifts),
 
       async createGift() {
@@ -54,6 +55,4 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
