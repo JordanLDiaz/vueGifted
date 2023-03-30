@@ -43,7 +43,7 @@ export default {
         try {
           window.event.preventDefault()
           logger.log("creating gift")
-          await giftsService.createGift()
+          await giftsService.createGift(giftForm)
         } catch (error) {
           logger.error(error)
           Pop.error(error)

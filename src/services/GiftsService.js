@@ -22,6 +22,7 @@ class GiftsService {
 
   async createGift(giftData) {
     const res = await giftApi.post('', giftData)
+    logger.log('[CREATING GIFT]', res.data)
     AppState.gifts = [new Gift(res.data), ...AppState.gifts]
   }
 }
